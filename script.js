@@ -1,13 +1,16 @@
 //global variables 
 const userPicture = document.getElementById('userPicture');
 const cpuPicture = document.getElementById("cpuPicture"); 
+const userDisplay = document.getElementById('userDisplay');
+const cpuDisplay = document.getElementById('cpuDisplay');
+const resultDisplay = document.getElementById('resultDisplay');
 
 //array with the items that will be used
 const itemsArr = ["paper", "rock", "scissors"];
 
-//vars that have the values of the use and cpu section
-let userPoints = document.getElementById('userPoints').innerHTML;
-let cpuPoints = document.getElementById('cpuPoints').innerHTML;
+//counters
+let userPoints = 0;
+let cpuPoints = 0;
 
 // randomizer
 function cpuChoice(){
@@ -19,9 +22,19 @@ function cpuChoice(){
     return itemsArr[randomizer];
 }
 
-//we then convert the string into number
-userPoints = parseInt(userPoints);
-cpuPoints = parseInt(cpuPoints);
+// //we then convert the string into number
+// userPoints.innerHTML = parseInt(userPoints);
+// cpuPoints.innerHTML = parseInt(cpuPoints);
+
+function counter(winner){
+    if(winner === true){
+        userPoints += 1;
+        userDisplay.innerText = userPoints;
+    }else{
+        cpuPoints +=1
+        cpuDisplay.innerText = cpuPoints;
+    }
+}
 
 
 //decision maker function 
@@ -34,9 +47,12 @@ function decision(user, cpu){
         user === 'scissors' && cpu === 'paper' ||
         user ===  'paper' && cpu === 'rock'
     ){
-        console.log('its a win')
+        counter(true);
+        console.log("won")
+        resultDisplay.innerText = "You won this time!"
     }else{
-        console.log('its a loose')
+       resultDisplay.innerText = "You have lost!";
+       counter(false);
     }
 }
 
