@@ -41,7 +41,7 @@ function counter(winner){
 function decision(user, cpu){
 //console.log(cpu + " vs " + user)
     if(user === cpu){
-        console.log("its a draw")
+        resultDisplay.innerText = "its a draw";
     }else if(
         user === 'rock' && cpu === 'scissors' ||
         user === 'scissors' && cpu === 'paper' ||
