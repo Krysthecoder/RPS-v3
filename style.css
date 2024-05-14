@@ -1,0 +1,95 @@
+body{
+    background: url(./src/starsWars\ background.jpg);
+    color: aliceblue;
+}
+.container{
+    border: 3px solid rgb(255, 232, 31);
+    height: 82vh;
+    border-radius: 1rem;
+}
+
+.music-btn{
+    background-color: transparent;
+    color: aliceblue;
+    border: 2px solid white;
+    border-radius: .5rem;
+    padding: .5rem;
+}
+
+.fighter-section{
+    margin: 3rem auto;
+    width: 60%;
+}
+
+.card{
+    background-color: transparent;
+    border: 2px solid rgb(255, 232, 31);
+    color: aliceblue;
+}
+
+.userDefaultPicture{
+    background: url(./src/jedi-order.png) no-repeat;
+    background-size: contain;
+    height: 200px;
+    background-position: center center;
+    filter: invert(100%); 
+}
+.cpuDefaultPicture{
+    background: url(./src/sith.png) no-repeat;
+    background-size: contain;
+    height: 200px;
+    background-position: center center;
+    filter: invert(100%); 
+}
+
+.rock{
+    background: url(./src/rock.jpg) no-repeat;
+    background-size: contain;
+    height: 200px;
+    background-position: center center;
+    filter: invert(0%); 
+}
+.paper{
+    background: url(./src/Paper.jpg) no-repeat;
+    background-size: contain;
+    height: 200px;
+    background-position: center center;
+    filter: invert(0%); 
+}
+.scissors{
+    background: url(./src/scissors.jpg) no-repeat;
+    background-size: contain;
+    height: 200px;
+    background-position: center center;
+    filter: invert(0%); 
+}
+
+#paperImage{
+    background: url(./src/Paper2.jpg) no-repeat;
+    background-size: contain;
+    height: 100px;
+    background-position: center center;
+    filter: invert(100%); 
+}
+
+#rockImage{
+    background: url(./src/rock2.jpg) no-repeat;
+    background-size: contain;
+    height: 100px;
+    background-position: center center;
+    filter: invert(100%); 
+}
+
+#scissorImage{
+    background: url(./src/Scissor-1.jpg) no-repeat;
+    background-size: contain;
+    height: 100px;
+    background-position: center center;
+    filter: invert(100%); 
+}
+
+.hover:hover{
+    scale: 1.1;
+    transition: all .6s ease-in-out;
+    cursor: pointer;
+}
