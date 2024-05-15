@@ -12,6 +12,10 @@ const itemsArr = ["paper", "rock", "scissors"];
 let userPoints = 0;
 let cpuPoints = 0;
 
+//music variables
+let bgMusic = false;
+let bgSound = new Audio("./src/bgAudioStarWars.mp3");
+
 // randomizer
 function cpuChoice(){
     const randomizer = Math.floor(Math.random()*3);
@@ -92,8 +96,17 @@ function selection(elem){
 
 
 
-function music(){
-    console.log("I am still trying to figure this out.")
+function music(elem){
+    if(bgMusic === false){
+      document.getElementById('bgMusicText').innerHTML = `Music Off <i class="bi bi-volume-mute-fill"></i>`;
+      bgMusic = true;
+      bgSound.play()
+    }else{
+        document.getElementById('bgMusicText').innerHTML = `Music On <i class="bi bi-volume-up"></i>`;
+      bgMusic = false;
+      bgSound.pause();
+      bgSound.currentTime = 0;
+    }
     //console.log(cpuChoice())
 }
 
