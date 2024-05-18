@@ -1,14 +1,15 @@
-//global variables 
+// Global variables 
+
 const userPicture = document.getElementById('userPicture');
 const cpuPicture = document.getElementById("cpuPicture"); 
 const userDisplay = document.getElementById('userDisplay');
 const cpuDisplay = document.getElementById('cpuDisplay');
 const resultDisplay = document.getElementById('resultDisplay');
 
-//array with the items that will be used
+// Array with the items that will be used
 const itemsArr = ["paper", "rock", "scissors"];
 
-//counters
+// Counters
 let userPoints = 0;
 let cpuPoints = 0;
 
@@ -26,22 +27,20 @@ function cpuChoice(){
     return itemsArr[randomizer];
 }
 
-// //we then convert the string into number
-// userPoints.innerHTML = parseInt(userPoints);
-// cpuPoints.innerHTML = parseInt(cpuPoints);
 
 function counter(winner){
     if(winner === true){
         userPoints += 1;
         userDisplay.innerText = userPoints;
     }else{
-        cpuPoints +=1
+        cpuPoints +=1;
         cpuDisplay.innerText = cpuPoints;
     }
 }
 
 
 //decision maker function 
+
 function decision(user, cpu){
 //console.log(cpu + " vs " + user)
     if(user === cpu){
@@ -52,8 +51,8 @@ function decision(user, cpu){
         user ===  'paper' && cpu === 'rock'
     ){
         counter(true);
-        console.log("won")
-        resultDisplay.innerText = "You won this time!"
+        console.log("won");
+        resultDisplay.innerText = "You won this time!";
     }else{
        resultDisplay.innerText = "You have lost!";
        counter(false);
@@ -61,7 +60,10 @@ function decision(user, cpu){
 }
 
 
-//reset function
+/* -------------------------------
+* Reset function
+* that will reset the entire page
+---------------------------------- */
 function resetPicture(classElem){
     setTimeout( () => {
         userPicture.classList.replace(classElem, "userDefaultPicture");
@@ -74,25 +76,22 @@ function selection(elem){
     if(elem === "rock"){
         userPicture.classList.replace("userDefaultPicture", elem);
         let enemy = cpuChoice();
-        decision(elem, enemy)
+        decision(elem, enemy);
         resetPicture(elem);
     }
     if(elem === "paper"){
         userPicture.classList.replace("userDefaultPicture", "paper");
         let enemy = cpuChoice();
-        decision(elem, enemy)
+        decision(elem, enemy);
         resetPicture(elem);
     }
     if(elem === "scissors"){
         userPicture.classList.replace("userDefaultPicture", "scissors");
         let enemy = cpuChoice();
-        decision(elem, enemy)
+        decision(elem, enemy);
         resetPicture(elem);
     }
 }
-
-
-
 
 
 
@@ -100,7 +99,7 @@ function music(elem){
     if(bgMusic === false){
       document.getElementById('bgMusicText').innerHTML = `Music Off <i class="bi bi-volume-mute-fill"></i>`;
       bgMusic = true;
-      bgSound.play()
+      bgSound.play();
     }else{
         document.getElementById('bgMusicText').innerHTML = `Music On <i class="bi bi-volume-up"></i>`;
       bgMusic = false;
