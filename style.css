@@ -65,10 +65,6 @@ body{
     filter: invert(0%); 
 }
 
-.player_selection{
-    
-}
-
 #paperImage{
     background: url(./src/Paper2.jpg) no-repeat;
     background-size: contain;
@@ -106,3 +102,60 @@ body{
 /* Md   >  768*/
 /* Sm   >   576 */
 
+@media (min-device-width : 769px) and (max-device-width : 992px) {
+    .fighter-section{
+        margin: 3rem auto;
+        width: 80%;
+    }
+}
+
+@media (min-device-width : 577px) and (max-device-width : 768px) {
+    .fighter-section{
+        margin: 3rem auto;
+        width: 90%;
+    }
+    .userDefaultPicture{
+        background: url(./src/jedi-order.png) no-repeat;
+        background-size: contain;
+        height: 150px;
+        background-position: center center;
+        filter: invert(100%); 
+    }
+    .cpuDefaultPicture{
+        background: url(./src/sith.png) no-repeat;
+        background-size: contain;
+        height: 150px;
+        background-position: center center;
+        filter: invert(100%); 
+    }
+}
+
+@media  (max-device-width : 576px) {
+    .fighter-section{
+        margin: 3rem auto;
+        width: 90%;
+    }
+    .userDefaultPicture{
+        background: url(./src/jedi-order.png) no-repeat;
+        background-size: contain;
+        height: 100px;
+        background-position: center center;
+        filter: invert(100%); 
+    }
+    .cpuDefaultPicture{
+        background: url(./src/sith.png) no-repeat;
+        background-size: contain;
+        height: 100px;
+        background-position: center center;
+        filter: invert(100%); 
+    }
+    .points-container{
+        width: 70% !important; 
+        margin: auto;
+        gap: 10px;
+    }
+    .player_selection{
+        width: 80% !important;
+        gap: 15px;
+    }
+}
